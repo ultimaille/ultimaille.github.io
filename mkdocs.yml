@@ -11,6 +11,9 @@ theme:
 markdown_extensions:
     - pymdownx.arithmatex:
         generic: true
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
 
 extra_javascript:
     - javascripts/mathjax.js
@@ -26,3 +29,8 @@ extra:
     -name: Français
     link: /fr/
     lang: fr
+
+repo_url: https://github.com/ultimaille/ultimaille
+
+plugins:
+  - include-markdown
