@@ -1,4 +1,7 @@
-# About
+---
+    hide:
+        - navigation
+---
 
 ## License
 

@@ -7,6 +7,17 @@ theme:
     logo: assets/logo.png
     palette:
         primary: teal
+    features:
+        - navigation.path
+        - toc.follow
+        - navigation.top
+        - navigation.indexes
+        - navigation.tabs
+        - navigation.tabs.sticky
+    nav:
+        - Section:
+            - index.md
+            - Page 1: getstarted.md
         
 markdown_extensions:
     - pymdownx.arithmatex:
