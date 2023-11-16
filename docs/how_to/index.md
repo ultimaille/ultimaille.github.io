@@ -46,13 +46,13 @@ A mesh is composed of elements named primitives, different type of primitives ar
 
 A vertex is a 3D point in space, which are generally connected by the edges of a face. Below, you can see vertices of 3 triangles in green.
 
-![Vertices](assets/vertices.png "vertices on tri surface")
+![Vertices](../assets/vertices.png "vertices on tri surface")
 
 ##### Half-edge
 
 A half-edge is a data structure that represents oriented edges which are contained by the faces and follow its contour. Each face have a set of half-edges and more important, each half-edge knows his previous, next and opposite half-edge. We'll see later how useful this is when we want to traverse a mesh.
 
-![Half-edge](assets/half-edge-tri.png "half-edges on tri surface")
+![Half-edge](../assets/half-edge-tri.png "half-edges on tri surface")
 
 ### Note
 
