@@ -11,7 +11,7 @@ Depending on your OS, you will need to download and install a few tools.
 
 | Windows | Linux |
 | --- | --- |
-| <ul><li>[CMake](https://cmake.org/download/)</li><li>[Git](https://git-scm.com/)</li><li>[Visual Studio C++](https://visualstudio.microsoft.com/fr/vs/features/cplusplus/)</li><li>[Graphite](https://github.com/BrunoLevy/GraphiteThree/releases)</li></ul> | <ul><li>[CMake](https://cmake.org/download/)</li><li>[Git](https://git-scm.com/)</li><li>Any IDE, for example [VS Code](https://code.visualstudio.com/)</li><li>[Graphite](https://github.com/BrunoLevy/GraphiteThree)</li></ul> |
+| <ul><li>[CMake](https://cmake.org/download/){:target="_blank"}</li><li>[Git](https://git-scm.com/){:target="_blank"}</li><li>[Visual Studio C++](https://visualstudio.microsoft.com/fr/vs/features/cplusplus/){:target="_blank"}</li><li>[Graphite](https://github.com/BrunoLevy/GraphiteThree/releases){:target="_blank"}</li></ul> | <ul><li>[CMake](https://cmake.org/download/){:target="_blank"}</li><li>[Git](https://git-scm.com/){:target="_blank"}</li><li>Any IDE, for example [VS Code](https://code.visualstudio.com/){:target="_blank"}</li><li>[Graphite](https://github.com/BrunoLevy/GraphiteThree){:target="_blank"}</li></ul> |
 
 ## 2. Get examples
 
