@@ -54,11 +54,12 @@ This command will:
  - open the result in graphite (don't forget to add graphite to your PATH)
 
 That's it, you should see a simple triangular surface displayed in the Graphite viewer. Now, you can try several examples or [create a project from scratch](getstarted.md#create-a-project-from-scratch).
-___
 
-## Create a project from scratch
+## 4. Create a project from scratch
 
 If you wish to create a project from scratch that use ultimaille, copy, clone or fork [ultimaille-hello](https://github.com/ultimaille/ultimaille-hello){:target="_blank"} blank project. Next, we suggest you visit the [How To page](how_to/index.md).
+
+___
 
 ## Note on Graphite viewer
 
