@@ -16,3 +16,5 @@ Ultimaille is a lightweight library that provides a friendly way to manipulate a
 Note: This library does not contain any ready-to-execute remeshing algorithms.
 
 Ultimaille has been designed to be simple, concise, easy to use and maintenable library that is able to do common mesh handling tasks for surfaces and volumes.
+___
+Next: [Getting started](getstarted.md)
