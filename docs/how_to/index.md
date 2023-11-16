@@ -9,7 +9,7 @@ This section gives a quick overview of how to use ultimaille for:
  - [Read / write attributes](browse_mesh.md)
 
 
-## 1 - Generalities
+## Generalities
 
 ### What is a mesh
 
