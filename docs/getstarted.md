@@ -15,36 +15,52 @@ Depending on your OS, you will need to download and install a few tools.
 
 ## 2. Get examples
 
-To get started, you should clone the Ultimaille examples [ultimaille-example](https://github.com/ultimaille/ultimaille-examples){:target="_blank"}. Open a console and type the following command:
+To get started, you should clone the Ultimaille examples [ultimaille-example](https://github.com/ultimaille/ultimaille-examples){:target="_blank"}. 
+
+### Windows
+
+On Windows, right-click in the folder where you wish to clone the repository, select `Open Git Bash here`. 
+
+![Open git bash](assets/open-git-bash.png)
+
+Then type the following command: 
 
 `git clone https://github.com/ultimaille/ultimaille-examples.git`
 
-!!!note 
-    You can find an in-depth description of the examples in the How to section.
+### Linux
+
+Open a terminal and type the following command:
+`git clone https://github.com/ultimaille/ultimaille-examples.git`
 
 ## 3. Build and run examples
 
-[Build and run for Windows](getstarted.md#windows) | [Build and run for Linux](getstarted.md#linux)
-
-## Windows
+### Windows
 
  - Open CMake GUI and configure like this:
 
 ![cmake gui screenshot](assets/cmake-gui-screenshot.png)
 
  - Click __Configure__, __Generate__, __Open Project__
+ - CMake will asks you to create the build folder, click on __Yes__
+
+![cmake gui screenshot](assets/cmake-ask-create-dir.png)
+
+ - CMake will asks you to specify generator, just click __Finish__
+
+![cmake gui screenshot](assets/cmake-ask-for-build-tools.png)
+
+
  - In the VS C++ solution explorer, right click on project `create_tri_mesh` and select __Set as Startup Project__
 
 ![VS Set as Startup](assets/vs-set-as-startup.png)
 
  - Run `create_tri_mesh.exe` in VS with __Ctrl+F5__
 
-That's it, you should see a simple triangular surface displayed in the Graphite viewer. This program use Ultimaille to create a triangle surface composed by 5 points and 3 facets (3 triangles) and write the mesh in a file named `tri_mesh.geogram`.
+That's it, you should see a simple triangular surface displayed in the Graphite viewer.
 
 
-Now, you can try several examples or [create a project from scratch](getstarted.md#create-a-project-from-scratch).
 
-## Linux
+### Linux
 
 In the `ultimaille-examples` directory type the following command:
 
@@ -57,7 +73,16 @@ This command will:
  - run example `create_tri_mesh`
  - open the result in graphite (don't forget to add graphite to your PATH)
 
-That's it, you should see a simple triangular surface displayed in the Graphite viewer. Now, you can try several examples or [create a project from scratch](getstarted.md#create-a-project-from-scratch).
+That's it, you should see a simple triangular surface displayed in the Graphite viewer.
+
+## What does the example do ?
+
+This program use Ultimaille to create a triangle surface composed by 5 points and 3 facets (3 triangles) and write the mesh in a file named `tri_mesh.geogram`. System is then called to execute Graphite viewer - which was previously automatically downloaded and unzip by CMake in the `build` directory of `ultimaille-examples` - and open the generated mesh.
+
+Now, you can try, modify several examples or [create a project from scratch](getstarted.md#4-create-a-project-from-scratch).
+
+!!!note 
+    You can find an in-depth description of the examples in the How to section.
 
 ## 4. Create a project from scratch
 
