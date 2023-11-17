@@ -56,4 +56,4 @@ A half-edge is a data structure that represents oriented edges which are contain
 
 ### Note
 
-You can find all the examples in this tutorial in the following repository: [ultimaille-examples](https://github.com/ultimaille/ultimaille-examples/tree/master)
+You can find all the examples in this tutorial in the following repository: [ultimaille-examples](https://github.com/ultimaille/ultimaille-examples/tree/master){:target="_blank"}

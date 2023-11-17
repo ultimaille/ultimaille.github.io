@@ -54,8 +54,6 @@ Then type the following command (trick: copy as usual by __Ctrl^c__, but click m
 
 That's it, you should see a simple triangular surface displayed in the Graphite viewer.
 
-
-
 ## What does the example do ?
 
 ### Git / CMake
