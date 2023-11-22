@@ -74,7 +74,7 @@ Now, you just have to save attribute into the mesh file.
 {%
    include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
    start="// --- SAVE FACET ---"
-   end="// --- END ---"
+   end="// --- CORNER ATTR ---"
    dedent=true
    comments=false
 %}
@@ -106,4 +106,30 @@ write_by_extension("mesh.geogram", m, {
         {{"ca1", ca1.ptr}, ...}  // Corner attributes
     }
 );
+```
+
+For example we will save all previously created attributes into a geogram file:
+
+```cpp
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   start="// --- SAVE ALL ATTRIBUTES ---"
+   end="// --- READ ATTRIBUTES ---"
+   dedent=true
+   comments=false
+%}
+```
+
+## Read attributes
+
+Now it's time to learn how to read the attributes we've written in our geogram files:
+
+```cpp
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   start="// --- READ ATTRIBUTES ---"
+   end="// --- END ---"
+   dedent=true
+   comments=false
+%}
 ```
