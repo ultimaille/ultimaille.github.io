@@ -2,11 +2,13 @@
 
 This section gives a quick overview of how to use ultimaille for:
 
+ - [Create a project from scratch](scratch.md)
  - [Load / save a mesh](load_save.md)
  - [Browse a mesh](browse_mesh.md)
  - [Create a mesh](create_mesh.md)
  - [Edit a mesh](edit_mesh.md)
  - [Read / write attributes](browse_mesh.md)
+ - [Visualize results](visualize_results.md)
 
 
 ## Generalities

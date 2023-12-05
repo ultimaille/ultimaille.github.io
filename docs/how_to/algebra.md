@@ -17,9 +17,13 @@ You can perform basic operations on vectors:
 
 | Name | Operation | Computation |
 | --- | --- | --- |
-| Addition | $$\vec{v} + \vec{u} $$ | $$ (v_1 + u_1, ..., v_n + u_n) $$ |
-| Subtraction | $$\vec{v} - \vec{u} $$ | $$ (v_1 - u_1, ..., v_n - u_n) $$ |
+| Vector / scalar multiplication | $$\vec{v} * a $$ | $$ (v_1 * a, ..., v_n * a) $$ |
+| Vector / scalar division | $$\vec{v} * a $$ | $$ (v_1 / a, ..., v_n / a) $$ |
+| Vector addition | $$\vec{v} + \vec{u} $$ | $$ (v_1 + u_1, ..., v_n + u_n) $$ |
+| Vector subtraction | $$\vec{v} - \vec{u} $$ | $$ (v_1 - u_1, ..., v_n - u_n) $$ |
 | Dot product | $$\vec{v} \cdot \vec{u} $$ | $$ \sum_{i=1}^{n}  v_i * u_i $$ |
+| Vector negation | $$-\vec{v} $$ | $$ (-v_1, ..., -v_n) $$ |
+| Vector indexation | $$-\vec{v}[i] $$ | $$ v_i $$ |
 
 Only on `vec2` and `vec3`:
 
@@ -55,4 +59,11 @@ Only on `vec2` and `vec3`:
 
 ## Matrices
 
-[Coming soon]
+In ultimaille you can define matrices of arbitrary size, but the most commonly used are 2x2, 3x3 and 4x4 matrices. For this reason, ultimaille has predefined the following matrix types: 
+
+| Name | Number of dimensions |
+| --- | --- |
+| `mat2x2` | 2x2 |
+| `mat3x3` | 3x3 |
+| `mat4x4` | 4x4 |
+| `mat<n, m>` | n x m |
