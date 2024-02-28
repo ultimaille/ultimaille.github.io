@@ -2,7 +2,7 @@
 
 ## Load & Save
 
-A mesh can be opened by using the generic function `read_by_extension` and writed using `write_by_extension`:
+A mesh can be opened by using the generic function `read_by_extension` and written using `write_by_extension`:
 
 ```cpp
 {%

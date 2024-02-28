@@ -9,6 +9,7 @@ This section gives a quick overview of how to use ultimaille for:
  - [Edit a mesh](edit_mesh.md)
  - [Read / write attributes](browse_mesh.md)
  - [Visualize results](visualize_results.md)
+ - [Use algebra](algebra.md)
 
 
 ## Generalities
@@ -27,7 +28,7 @@ In 3D computer graphics and modeling, volumetric meshes are a polygonal represen
 
 #### Surface mesh
 
-Ultimaille handles surface meshes such as triangular meshes - whose faces are triangles, quadrangular meshes - whose faces are quadrilaterals - and, more generally, polygonal meshes. For each type of surface, ultimaille has the corresponding classes: `Triangle`, `Quads`, `Polygons`.
+Ultimaille handles surface meshes such as triangular meshes - whose faces are triangles, quadrangular meshes - whose faces are quadrilaterals - and, more generally, polygonal meshes. For each type of surface, ultimaille has the corresponding classes: `Triangles`, `Quads`, `Polygons`.
 
 Ultimaille provides interfaces for accessing the different primitives of these meshes: vertices, faces, edges or, more precisely, half-edges and corners.
 
