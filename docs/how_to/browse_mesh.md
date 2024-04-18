@@ -14,6 +14,8 @@ In what follows, we present the two levels of iterating over mesh primitives.
 
 ### Without connectivity
 
+#### Example 1 - Iterate primtives on mesh
+
 For example, if you need to iterate over primitives of a mesh, you can do this directly as following:
 
 ```cpp
@@ -28,9 +30,23 @@ For example, if you need to iterate over primitives of a mesh, you can do this d
 
 However, if you desire to do much more complicated things on theses primitives, you need to traverse the mesh at lower level.
 
+#### Example 2 - Get primitives by id
+
+You can also get a primitive by its id:
+
+```cpp 
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/iterate_primitives_conn.cpp"
+   start="// --- GET BY ID ---"
+   end="// ---"
+   dedent=true
+   comments=false
+%}
+```
+
 ### With connectivity
 
-#### Example 1 - Just iterate
+#### Example 1 - Iterate on primitives
 
 Just load a mesh as previously:
 
