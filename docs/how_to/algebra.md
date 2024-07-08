@@ -18,12 +18,12 @@ You can perform basic operations on vectors:
 | Name | Operation | Computation |
 | --- | --- | --- |
 | Vector / scalar multiplication | $$\vec{v} * a $$ | $$ (v_1 * a, ..., v_n * a) $$ |
-| Vector / scalar division | $$\vec{v} * a $$ | $$ (v_1 / a, ..., v_n / a) $$ |
+| Vector / scalar division | $$\vec{v} / a $$ | $$ (v_1 / a, ..., v_n / a) $$ |
 | Vector addition | $$\vec{v} + \vec{u} $$ | $$ (v_1 + u_1, ..., v_n + u_n) $$ |
 | Vector subtraction | $$\vec{v} - \vec{u} $$ | $$ (v_1 - u_1, ..., v_n - u_n) $$ |
 | Dot product | $$\vec{v} \cdot \vec{u} $$ | $$ \sum_{i=1}^{n}  v_i * u_i $$ |
 | Vector negation | $$-\vec{v} $$ | $$ (-v_1, ..., -v_n) $$ |
-| Vector indexation | $$-\vec{v}[i] $$ | $$ v_i $$ |
+| Vector indexation | $$\vec{v}[i] $$ | $$ v_i $$ |
 
 Only on `vec2` and `vec3`:
 

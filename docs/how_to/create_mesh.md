@@ -68,4 +68,28 @@ Quad mesh is a surface mesh where facets are quadrangles. All you have to do is 
 
 ### Hex mesh
 
-[Coming soon]
+Hex mesh is a volume mesh where cells are hexahedra. All you have to do is create a `Hexahedra` and the mesh points, then cells and link each vertex cells to a point.
+
+```cpp 
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_volume_mesh.cpp"
+   start="// --- LOAD ---"
+   end="// --- END ---"
+   dedent=true
+   comments=false
+%}
+```
+
+## Polyline
+
+Polyline are just line segments linked together. You have to create a `Polyline` and it's points, then relies them.
+
+```cpp 
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_polyline.cpp"
+   start="// --- LOAD ---"
+   end="// --- END ---"
+   dedent=true
+   comments=false
+%}
+```
