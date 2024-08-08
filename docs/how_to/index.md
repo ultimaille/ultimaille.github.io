@@ -8,6 +8,7 @@ This section gives a quick overview of how to use ultimaille for:
  - [Create a mesh](create_mesh.md)
  - [Edit a mesh](edit_mesh.md)
  - [Read / write attributes](browse_mesh.md)
+ - [Work on geometry of primitives](geometry.md)
  - [Visualize results](visualize_results.md)
  - [Use algebra](algebra.md)
 
