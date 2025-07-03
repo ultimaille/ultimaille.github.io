@@ -14,7 +14,7 @@ Each primitive can be associated with one or more attributes. Each primitive typ
 |---|---|
 | Surface::Vertex | PointAttribute<T\> |
 | Surface::Facet | FacetAttribute<T\> |
-| Surface::Edge | CornerAttribute<T\> |
+| Surface::Halfedge | CornerAttribute<T\> |
 
 The attributes classes are templated, so you can associate data of any type with any primitive. The most commonly used types are `double`, `int`, `bool`, `vec2`, `vec3`.
 
@@ -94,19 +94,6 @@ Of course, the purpose of attributes is not to make pretty and colorful cats. We
 ## Save attributes
 
 As you've seen, attributes can be saved directly in geogram files. Geogram files can then be read by graphite, which is able to display the attributes. You'll notice that attributes are stored in the file as key/value pairs: __each attribute must have a name__. 
-
-!!! note
-    When saving the model, you can specify several attributes, but these must be __grouped and specified in the column corresponding to their type__.
-
-```cpp
-// Save mesh with attributes
-write_by_extension("mesh.geogram", m, {
-        {{"pa1", pa1.ptr}, ...}, // Point attributes
-        {{"fa1", fa1.ptr}, ...}, // Facet attributes
-        {{"ca1", ca1.ptr}, ...}  // Corner attributes
-    }
-);
-```
 
 For example we will save all previously created attributes into a geogram file:
 
