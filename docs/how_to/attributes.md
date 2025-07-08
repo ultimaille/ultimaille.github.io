@@ -127,8 +127,8 @@ If you want to get an attribute by name later, you can use attribute dynamic bin
 
  - Declare an attribute variable
  - And bind it to a mesh attribute when necessary:
-   - If the attribute exists in the mesh, your attribute variable will be filled with the attribute data
-   - Otherwise, the attribute variable is filled by the default value
+    - If the attribute exists in the mesh, your attribute variable will be filled with the attribute data
+    - Otherwise, the attribute variable is filled by the default value
 
 ```cpp
 {%
