@@ -15,6 +15,8 @@ Each primitive can be associated with one or more attributes. Each primitive typ
 | Surface::Vertex | PointAttribute<T\> |
 | Surface::Facet | FacetAttribute<T\> |
 | Surface::Halfedge | CornerAttribute<T\> |
+| Volume::Facet | CellFacetAttribute<T\> |
+| Volume::Cell | CellAttribute<T\> |
 | Polyline::Edge | EdgeAttribute<T\> |
 
 The attributes classes are templated, so you can associate data of any type with any primitive. The most commonly used types are `double`, `int`, `bool`, `vec2`, `vec3`.
@@ -99,6 +101,10 @@ Of course, the purpose of attributes is not to make pretty and colorful cats. We
    comments=false
 %}
 ```
+
+If you visualise this attribute into Graphite, you will see this sort of cat:
+
+![Graphite view of grid catorus](../assets/catorus_corner.png "Graphite view of grid catorus")
 
 ### Edge attribute 
 
