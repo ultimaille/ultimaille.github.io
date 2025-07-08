@@ -115,7 +115,26 @@ Now it's time to learn how to read the attributes we've written in our geogram f
 {%
    include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
    start="// --- READ ATTRIBUTES ---"
-   end="// --- END ---"
+   end="// --- END READ ATTRIBUTES ---"
+   dedent=true
+   comments=false
+%}
+```
+
+## Dynamic binding
+
+If you want to get an attribute by name later, you can use attribute dynamic binding:
+
+ - Declare an attribute variable
+ - And bind it to a mesh attribute when necessary:
+   - If the attribute exists in the mesh, your attribute variable will be filled with the attribute data
+   - Otherwise, the attribute variable is filled by the default value
+
+```cpp
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   start="// --- BIND ATTRIBUTES ---"
+   end="// --- END BIND ATTRIBUTES ---"
    dedent=true
    comments=false
 %}
