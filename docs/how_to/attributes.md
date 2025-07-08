@@ -15,6 +15,7 @@ Each primitive can be associated with one or more attributes. Each primitive typ
 | Surface::Vertex | PointAttribute<T\> |
 | Surface::Facet | FacetAttribute<T\> |
 | Surface::Halfedge | CornerAttribute<T\> |
+| Polyline::Edge | EdgeAttribute<T\> |
 
 The attributes classes are templated, so you can associate data of any type with any primitive. The most commonly used types are `double`, `int`, `bool`, `vec2`, `vec3`.
 
@@ -24,7 +25,7 @@ The attributes classes are templated, so you can associate data of any type with
 
 ## Create and fill attributes
 
-### Example 1 - Point attribute
+### Point attribute
 
 In this example, we'll create a point attribute for which for each vertex of the mesh we'll set the distance between origin and this vertex.
 
@@ -54,7 +55,7 @@ Now, let's visualize this point attribute into Graphite. What you see is that th
 
 ![Graphite view of manhattan catorus](../assets/catorus_manhattan_dist.png "Graphite view of manhattan catorus")
 
-### Example 2 - Facet attribute
+### Facet attribute
 
 In this example, we'll create a facet attribute for which we'll set a random value between 0 and 99 for each facet of the mesh.
 
@@ -87,9 +88,22 @@ If you visualise this attribute into Graphite, you will see a very funky cat !
 
 Of course, the purpose of attributes is not to make pretty and colorful cats. We can use attributes to debug and visualize what we're doing on a mesh. You'll see better examples later.
 
-### Example 3 - Corner attribute
+### Corner attribute
 
 [Coming soon]
+
+### Edge attribute 
+
+// --- EDGE ATTR ---
+```cpp
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   start="// --- EDGE ATTR ---"
+   end="// --- END EDGE ATTR ---"
+   dedent=true
+   comments=false
+%}
+```
 
 ## Save attributes
 
