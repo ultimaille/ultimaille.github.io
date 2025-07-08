@@ -90,11 +90,18 @@ Of course, the purpose of attributes is not to make pretty and colorful cats. We
 
 ### Corner attribute
 
-[Coming soon]
+```cpp
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   start="// --- CORNER ATTR ---"
+   end="// --- END CORNER ATTR ---"
+   dedent=true
+   comments=false
+%}
+```
 
 ### Edge attribute 
 
-// --- EDGE ATTR ---
 ```cpp
 {%
    include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
