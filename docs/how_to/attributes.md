@@ -104,7 +104,7 @@ Of course, the purpose of attributes is not to make pretty and colorful cats. We
 
 If you visualise this attribute into Graphite, you will see this sort of cat:
 
-![Graphite view of grid catorus](../assets/catorus_corner.png "Graphite view of grid catorus")
+![Graphite view of grid catorus](../assets/catorus_corner_attr.png "Graphite view of grid catorus")
 
 ### Edge attribute 
 
