@@ -1,0 +1,1461 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../algebra/">
+      
+      
+        <link rel="next" href="../browse_mesh/">
+      
+      
+        
+          <link rel="alternate" href="../.." hreflang="en">
+        
+          <link rel="alternate" href="../.." hreflang="en">
+        
+          <link rel="alternate" href="../.." hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Read / Write attributes - Ultimaille</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#read-write-attributes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ultimaille" class="md-header__button md-logo" aria-label="Ultimaille" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ultimaille
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Read / Write attributes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../.." hreflang="" class="md-select__link">
+              
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../.." hreflang="" class="md-select__link">
+              
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../.." hreflang="" class="md-select__link">
+              
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ultimaille/ultimaille" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../get_started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Get started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  How to
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ultimaille" class="md-nav__button md-logo" aria-label="Ultimaille" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Ultimaille
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ultimaille/ultimaille" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get_started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Get started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_started/getstarted_linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux / MacOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_started/getstarted_windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How to
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read / Write attributes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read / Write attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-fill-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create and fill attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create and fill attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facet-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facet attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corner attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic binding
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse_mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse a mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../edit_mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edit a mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work on geometry of primitives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load_save/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Load / Save a mesh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create project from scratch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use solver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualize_results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualize results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attribute types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-fill-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create and fill attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create and fill attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#point-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facet-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facet attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corner-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corner attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic binding
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    How to
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="read-write-attributes">Read / Write attributes</h1>
+<p>If you've read the section on Graphite, we talked briefly about what we call attributes. Attributes are data that can be written to the primitives of a mesh. They are detached from the mesh itself, but can still be saved when the file is saved in geogram format. </p>
+<p>The geogram format is specific to the Graphite viewer. The advantage of this format is that you can visualize mesh attributes in Graphite in the form of color maps. To find out more, please refer to the Graphite section.</p>
+<p>We'll look at how to create different kinds of attributes and save them for viewing, then load them from a file.</p>
+<h2 id="attribute-types">Attribute types</h2>
+<p>Each primitive can be associated with one or more attributes. Each primitive type has a corresponding attribute type. </p>
+<table>
+<thead>
+<tr>
+<th>Primitive type</th>
+<th>Attribute type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface::Vertex</td>
+<td>PointAttribute&lt;T&gt;</td>
+</tr>
+<tr>
+<td>Surface::Facet</td>
+<td>FacetAttribute&lt;T&gt;</td>
+</tr>
+<tr>
+<td>Surface::Halfedge</td>
+<td>CornerAttribute&lt;T&gt;</td>
+</tr>
+<tr>
+<td>Volume::Facet</td>
+<td>CellFacetAttribute&lt;T&gt;</td>
+</tr>
+<tr>
+<td>Volume::Cell</td>
+<td>CellAttribute&lt;T&gt;</td>
+</tr>
+<tr>
+<td>Polyline::Edge</td>
+<td>EdgeAttribute&lt;T&gt;</td>
+</tr>
+</tbody>
+</table>
+<p>The attributes classes are templated, so you can associate data of any type with any primitive. The most commonly used types are <code>double</code>, <code>int</code>, <code>bool</code>, <code>vec2</code>, <code>vec3</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>Only the geogram file format support attributes.</li>
+<li>If you want to view attributes (in Graphite), only the primitive types listed above can be used.</li>
+</ul>
+</div>
+<h2 id="create-and-fill-attributes">Create and fill attributes</h2>
+<h3 id="point-attribute">Point attribute</h3>
+<p>In this example, we'll create a point attribute for which for each vertex of the mesh we'll set the distance between origin and this vertex.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a point attribute</span>
+<span class="n">PointAttribute</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pa</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">points</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">iter_vertices</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Compute manhattan distance (l1-norm) between origin and vertex</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">pos</span><span class="p">();</span>
+<span class="w">    </span><span class="n">pa</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now, you just have to save attribute into the mesh file.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Save mesh with previously created attribute</span>
+<span class="n">write_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;catorus_manhattan_point_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;pa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pa</span><span class="p">}});</span>
+</code></pre></div>
+<p>Now, let's visualize this point attribute into Graphite. What you see is that the further away the vertices are from the origin, the whiter they are, and the closer they are, the darker they are.</p>
+<p><img alt="Graphite view of manhattan catorus" src="../../assets/catorus_manhattan_dist.png" title="Graphite view of manhattan catorus" /></p>
+<h3 id="facet-attribute">Facet attribute</h3>
+<p>In this example, we'll create a facet attribute for which we'll set a random value between 0 and 99 for each facet of the mesh.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a facet attribute</span>
+<span class="n">FacetAttribute</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fa</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+
+<span class="c1">// For all facets in mesh, associate a random int value between [0-99]</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">iter_facets</span><span class="p">())</span>
+<span class="w">    </span><span class="n">fa</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</code></pre></div>
+<p>Now, you just have to save attribute into the mesh file.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Save mesh with previously created attribute</span>
+<span class="n">write_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;catorus_facet_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;fa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fa</span><span class="p">}});</span>
+</code></pre></div>
+<p>If you visualise this attribute into Graphite, you will see a very funky cat !</p>
+<p><img alt="Graphite view of funky catorus" src="../../assets/face_attr_funky_cat.png" title="Graphite view of funky catorus" /></p>
+<p>Of course, the purpose of attributes is not to make pretty and colorful cats. We can use attributes to debug and visualize what we're doing on a mesh. You'll see better examples later.</p>
+<h3 id="corner-attribute">Corner attribute</h3>
+<div class="highlight"><pre><span></span><code><span class="n">CornerAttribute</span><span class="o">&lt;</span><span class="n">vec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ca</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">h</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">iter_halfedges</span><span class="p">())</span>
+<span class="w">    </span><span class="n">ca</span><span class="p">[</span><span class="n">h</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec2</span><span class="p">(</span><span class="n">h</span><span class="p">.</span><span class="n">from</span><span class="p">().</span><span class="n">pos</span><span class="p">().</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">from</span><span class="p">().</span><span class="n">pos</span><span class="p">().</span><span class="n">y</span><span class="p">);</span>
+
+<span class="n">write_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;catorus_corner_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;ca&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ca</span><span class="p">}});</span>
+</code></pre></div>
+<p>If you visualise this attribute into Graphite, you will see this sort of cat:</p>
+<p><img alt="Graphite view of grid catorus" src="../../assets/catorus_corner_attr.png" title="Graphite view of grid catorus" /></p>
+<h3 id="edge-attribute">Edge attribute</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a edge attribute</span>
+<span class="n">EdgeAttribute</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edge_id_attr</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"> </span>
+<span class="c1">// For all edge in polyline set edge attribute with edge id</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">iter_edges</span><span class="p">())</span>
+<span class="w">    </span><span class="n">edge_id_attr</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+
+<span class="n">write_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;pyramid_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;edge_id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">edge_id_attr</span><span class="p">}});</span>
+</code></pre></div>
+<h2 id="save-attributes">Save attributes</h2>
+<p>As you've seen, attributes can be saved directly in geogram files. Geogram files can then be read by graphite, which is able to display the attributes. You'll notice that attributes are stored in the file as key/value pairs: <strong>each attribute must have a name</strong>. </p>
+<p>For example we will save all previously created attributes into a geogram file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Save mesh with all previously created attributes</span>
+<span class="n">write_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;catorus_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;pa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pa</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;fa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fa</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ca&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ca</span><span class="p">}});</span>
+</code></pre></div>
+<h2 id="read-attributes">Read attributes</h2>
+<p>Now it's time to learn how to read the attributes we've written in our geogram files:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Load mesh and read attributes</span>
+<span class="n">Triangles</span><span class="w"> </span><span class="n">m2</span><span class="p">;</span>
+<span class="n">SurfaceAttributes</span><span class="w"> </span><span class="n">attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_by_extension</span><span class="p">(</span><span class="n">output_dir</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;catorus_attr.geogram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">);</span>
+<span class="c1">// Load &quot;pa&quot; attribute</span>
+<span class="n">PointAttribute</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pa2</span><span class="p">(</span><span class="s">&quot;pa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attributes</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">);</span>
+<span class="c1">// Load &quot;fa&quot; attribute</span>
+<span class="n">FacetAttribute</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fa2</span><span class="p">(</span><span class="s">&quot;fa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attributes</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">);</span>
+<span class="c1">// Load &quot;ca&quot; attribute</span>
+<span class="n">CornerAttribute</span><span class="o">&lt;</span><span class="n">vec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ca2</span><span class="p">(</span><span class="s">&quot;ca&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attributes</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;PointAttribute size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pa2</span><span class="p">.</span><span class="n">ptr</span><span class="p">.</span><span class="n">get</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, FacetAttribute size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fa2</span><span class="p">.</span><span class="n">ptr</span><span class="p">.</span><span class="n">get</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, CornerAttribute size: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ca2</span><span class="p">.</span><span class="n">ptr</span><span class="p">.</span><span class="n">get</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
+<span class="w">    </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="dynamic-binding">Dynamic binding</h2>
+<p>If you want to get an attribute by name later, you can use attribute dynamic binding:</p>
+<ul>
+<li>Declare an attribute variable</li>
+<li>And bind it to a mesh attribute when necessary:<ul>
+<li>If the attribute exists in the mesh, your attribute variable will be filled with the attribute data</li>
+<li>Otherwise, the attribute variable is filled by the default value</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Comment below and uncomment next line to see different behavior</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">bind_attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pa&quot;</span><span class="p">;</span>
+<span class="c1">// const std::string bind_attr = &quot;unkown_attribute&quot;;</span>
+
+<span class="c1">// Create a new point attribute</span>
+<span class="n">PointAttribute</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pa3</span><span class="p">;</span>
+
+<span class="c1">// Bind to the mesh, if bind return true, the attribute already exists: pa3 is fill with &#39;pa&#39; data</span>
+<span class="c1">// if bind return false, the attribute does not exist: pa3 is added to the mesh and is fill with default value</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pa3</span><span class="p">.</span><span class="n">bind</span><span class="p">(</span><span class="n">bind_attr</span><span class="p">,</span><span class="w"> </span><span class="n">attributes</span><span class="p">,</span><span class="w"> </span><span class="n">m2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Point attribute &#39;pa&#39; exists and is bound successfully.&quot;</span><span class="w"> </span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Point attribute &#39;pa&#39; does not exist and was added successfully.&quot;</span><span class="w"> </span>
+<span class="w">        </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Display attribute values</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pa3</span><span class="p">[</span><span class="n">m</span><span class="p">.</span><span class="n">vertex</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "toc.follow", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
