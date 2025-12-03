@@ -41,6 +41,8 @@ extra:
     -name: Français
     link: /fr/
     lang: fr
+  version:
+    provider: mike
 
 repo_url: https://github.com/ultimaille/ultimaille
 
