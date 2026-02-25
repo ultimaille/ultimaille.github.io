@@ -4,6 +4,7 @@ on:
     branches:
       - master 
       - main
+      - ultimaille-docs-2.1.0
       
 permissions:
   contents: write
