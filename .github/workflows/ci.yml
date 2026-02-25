@@ -45,5 +45,5 @@ jobs:
 
       - name: Create / Update version with mike and deploy
         run: |
-          mike deploy --push --update-aliases v2.1.0 latest
+          mike deploy --push --update-aliases v2.2.0 latest
           mike set-default --push latest 
