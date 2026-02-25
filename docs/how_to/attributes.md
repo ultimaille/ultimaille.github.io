@@ -33,7 +33,7 @@ In this example, we'll create a point attribute for which for each vertex of the
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- POINT ATTR ---"
    end="// --- SAVE POINT ---"
    dedent=true
@@ -45,7 +45,7 @@ Now, you just have to save attribute into the mesh file.
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- SAVE POINT ---"
    end="// --- FACET ATTR ---"
    dedent=true
@@ -63,7 +63,7 @@ In this example, we'll create a facet attribute for which we'll set a random val
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- FACET ATTR ---"
    end="// --- SAVE FACET ---"
    dedent=true
@@ -75,7 +75,7 @@ Now, you just have to save attribute into the mesh file.
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- SAVE FACET ---"
    end="// --- CORNER ATTR ---"
    dedent=true
@@ -94,7 +94,7 @@ Of course, the purpose of attributes is not to make pretty and colorful cats. We
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- CORNER ATTR ---"
    end="// --- END CORNER ATTR ---"
    dedent=true
@@ -110,7 +110,7 @@ If you visualise this attribute into Graphite, you will see this sort of cat:
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- EDGE ATTR ---"
    end="// --- END EDGE ATTR ---"
    dedent=true
@@ -126,7 +126,7 @@ For example we will save all previously created attributes into a geogram file:
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- SAVE ALL ATTRIBUTES ---"
    end="// --- READ ATTRIBUTES ---"
    dedent=true
@@ -140,28 +140,9 @@ Now it's time to learn how to read the attributes we've written in our geogram f
 
 ```cpp
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.1.0/examples/create_fill_attributes.cpp"
    start="// --- READ ATTRIBUTES ---"
    end="// --- END READ ATTRIBUTES ---"
-   dedent=true
-   comments=false
-%}
-```
-
-## Dynamic binding
-
-If you want to get an attribute by name later, you can use attribute dynamic binding:
-
- - Declare an attribute variable
- - And bind it to a mesh attribute when necessary:
-    - If the attribute exists in the mesh, your attribute variable will be filled with the attribute data
-    - Otherwise, the attribute variable is filled by the default value
-
-```cpp
-{%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/create_fill_attributes.cpp"
-   start="// --- BIND ATTRIBUTES ---"
-   end="// --- END BIND ATTRIBUTES ---"
    dedent=true
    comments=false
 %}
