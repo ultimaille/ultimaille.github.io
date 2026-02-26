@@ -7,7 +7,7 @@ Extracting the geometry of primitives provides access to functions for calculati
 Example of an extraction of the geometry of a tri facet:
 ```cpp 
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/primitive_geometry.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.2.0/examples/primitive_geometry.cpp"
    start="// --- TRI ---"
    end="// --- END TRI ---"
    dedent=true
@@ -18,9 +18,20 @@ Example of an extraction of the geometry of a tri facet:
 Example of an extraction of the geometry of a quad facet:
 ```cpp 
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/primitive_geometry.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.2.0/examples/primitive_geometry.cpp"
    start="// --- QUAD ---"
    end="// --- END QUAD ---"
+   dedent=true
+   comments=false
+%}
+```
+
+Example of an extraction of the geometry of a tet cell:
+```cpp 
+{%
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.2.0/examples/primitive_geometry.cpp"
+   start="// --- TET ---"
+   end="// --- END TET ---"
    dedent=true
    comments=false
 %}
@@ -29,7 +40,7 @@ Example of an extraction of the geometry of a quad facet:
 Example of an extraction of the geometry of a hex cell:
 ```cpp 
 {%
-   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/master/examples/primitive_geometry.cpp"
+   include-markdown "https://raw.githubusercontent.com/ultimaille/ultimaille-examples/refs/heads/ultimaille-examples-2.2.0/examples/primitive_geometry.cpp"
    start="// --- HEX ---"
    end="// --- END HEX ---"
    dedent=true
